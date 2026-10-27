@@ -1,23 +1,26 @@
-# Poiato CRM — demonstração interativa
+# Poiato CRM — demonstração interativa V2
 
-![Pedro Poiato — Soluções Digitais](assets/poiato-banner.png)
+![Prévia do painel comercial](preview.png)
 
-Demonstração independente criada por **Pedro Poiato** para apresentar o tipo de solução que desenvolve.
+Uma versão pública e independente de um CRM desktop em que trabalhei, recriada para o navegador com dados inventados. O projeto original é feito com **Python, CustomTkinter e MySQL**; esta demonstração usa **HTML, CSS e JavaScript**.
 
-## O que você pode experimentar
+## Explore a demonstração
 
-Dashboard de leads, follow-ups, filtros, funil comercial Kanban e configurações de WhatsApp.
+- Dashboard com follow-ups, tarefas e indicadores.
+- Leads com busca, filtros, cadastro, edição e responsáveis.
+- Funil Kanban com movimentação entre etapas.
+- Ficha detalhada: contato, anotações, próxima atividade e histórico.
+- Arquivamento e restauração de leads.
+- Auditoria de movimentações durante a sessão.
+- Configurações ilustrativas de perfil e distribuição por DDD.
+- Exportação CSV e importação de até dez registros fictícios.
 
-Abra [a demonstração no navegador](https://pedro-poiato.github.io/poiato-crm-demo/) depois que o GitHub Pages estiver habilitado. Você também pode abrir `index.html` diretamente no computador.
+**[Abrir a demonstração no GitHub Pages](https://pedro-poiato.github.io/poiato-crm-demo/)** (depois de ativar o Pages).
 
-## Sobre o código
+## Limitações
 
-O aplicativo original que inspirou esta demonstração possui outra arquitetura: **Python, MySQL e CustomTkinter**. Esta versão pública foi recriada em **HTML, CSS e JavaScript**, para funcionar sem instalação.
+Não existe servidor, banco de dados, autenticação, conexão com WhatsApp ou persistência após recarregar a página. Perfis e regras são ilustrativos. Não use dados reais: as informações que aparecem são fictícias. O código da aplicação empresarial original não está publicado.
 
-Os dados são fictícios e ficam apenas na sessão do navegador. Não existe conexão com banco de dados, sistemas reais, autenticação, e-mails ou serviços externos. O código interno dos sistemas empresariais **não faz parte deste repositório**.
+Para testar no computador, abra `index.html` em um navegador.
 
-## Autoria
-
-**Pedro Poiato — Soluções Digitais**
-
-[GitHub](https://github.com/Pedro-Poiato) · [LinkedIn](https://www.linkedin.com/in/pedro-poiato-638474389/)
+Pedro Poiato — Soluções Digitais

@@ -23,7 +23,7 @@ function renderDashboard(){const metrics=[
  ["Primeiro contato",leads.filter(x=>x.attention==="Primeiro contato").length,"info","Primeiro contato"],
  ["Parados +3 dias",leads.filter(x=>x.attention==="Parado +3 dias").length,"neutral","Parado +3 dias"],
  ["Aguardando lead",leads.filter(x=>x.attention==="Aguardando lead").length,"info","Aguardando lead"],
- ["Novos hoje",2,"accent",null],
+ ["Novos hoje",leads.filter(x=>/Hoje|Agora/.test(x.last)).length,"accent",null],
  ["Convertidos no mês",leads.filter(x=>x.status==="Convertido").length,"success",null],
  ["Perdidos no mês",leads.filter(x=>x.status==="Perdido").length,"danger",null]
  ];
