@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Poiato CRM — demonstração</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand poiato-brand"><img src="assets/poiato-p.png" alt="Identidade visual Pedro Poiato"><div><div>PEDRO POIATO</div><small>SOLUÇÕES DIGITAIS</small><span class="product-identifier">Poiato CRM</span></div></div>
+    <div class="user-card"><div class="avatar">PD</div><div><strong>Usuário demonstração</strong><span>Administrador</span></div></div>
+    <div class="nav-caption">NAVEGAÇÃO</div>
+    <nav aria-label="Menu principal">
+      <button class="nav-item active" data-page="dashboard"><span class="nav-ico">▦</span>Dashboard</button>
+      <button class="nav-item" data-page="leads"><span class="nav-ico">●</span>Leads</button>
+      <button class="nav-item" data-page="funil"><span class="nav-ico">⇢</span>Funil Comercial</button>
+      <button class="nav-item" data-page="conta"><span class="nav-ico">○</span>Minha conta</button>
+      <button class="nav-item" data-page="whatsapp"><span class="nav-ico">◉</span>WhatsApp</button>
+      <button class="nav-item" data-page="config"><span class="nav-ico">⚙</span>Configurações</button>
+    </nav>
+    <div class="nav-foot"><div class="foot-rule"></div><div>Portfólio • dados fictícios</div><small>Protótipo interativo</small></div>
+  </aside>
+  <main class="main">
+    <header class="masthead">
+      <div><div class="eyebrow">POIATO&nbsp; / &nbsp;CRM COMERCIAL</div><h1 id="page-title">Dashboard</h1><p id="page-subtitle">Visão geral da operação comercial</p></div>
+      <div class="header-right"><span id="date"></span><span class="demo-tag">DEMONSTRAÇÃO</span></div>
+    </header>
+    <section class="page active" id="dashboard">
+      <div class="metrics" id="metrics"></div>
+      <div class="section-head"><h2>Minhas ações de hoje</h2><button class="text-action" data-go="leads">Ver leads →</button></div>
+      <div class="action-list" id="today-actions"></div>
+      <div class="section-head"><h2>Leads parados há mais de 3 dias</h2></div>
+      <div class="action-list" id="stagnant-leads"></div>
+    </section>
+    <section class="page" id="leads">
+      <div class="toolbar">
+        <input id="leads-search" type="search" placeholder="Buscar por nome, empresa, CNPJ, WhatsApp ou e-mail" aria-label="Buscar leads">
+        <button id="search-action" class="btn btn-primary">Buscar</button>
+        <button class="btn btn-primary" id="new-lead">+ Novo lead</button>
+        <button class="btn btn-outline" id="import-demo">Importar planilha</button>
+        <button class="btn btn-outline" id="export-csv">Exportar CSV</button>
+      </div>
+      <div class="filterbar surface">
+        <select id="stage-filter" aria-label="Etapa"><option value="">Todas as etapas</option></select>
+        <select id="origin-filter" aria-label="Origem"><option value="">Todas as origens</option><option>Site</option><option>Indicação</option><option>Evento</option></select>
+        <select id="owner-filter" aria-label="Responsável"><option value="">Todos os responsáveis</option><option>Equipe Comercial</option><option>Usuário Demo</option></select>
+        <select id="status-filter" aria-label="Status"><option value="">Todos os status</option><option>Ativo</option><option>Convertido</option><option>Perdido</option></select>
+        <select id="attention-filter" aria-label="Situação"><option value="">Todas as situações</option><option>Precisa responder</option><option>Aguardando lead</option><option>Primeiro contato</option><option>Follow-up atrasado</option><option>Parado +3 dias</option></select>
+      </div>
+      <div class="surface table-surface">
+        <div class="table-caption"><strong id="result-count">Leads</strong><span>Dê um duplo clique em um lead para abrir os detalhes</span></div>
+        <div class="table-scroll"><table><thead><tr><th>Nome / empresa</th><th>Origem</th><th>Etapa</th><th>Situação</th><th>Responsável</th><th>Último contato</th></tr></thead><tbody id="lead-body"></tbody></table></div>
+      </div>
+    </section>
+    <section class="page" id="funil">
+      <div class="kanban-tools surface"><button class="btn btn-primary" id="new-stage">+ Nova etapa</button><input id="kanban-search" type="search" placeholder="Buscar lead por nome..." aria-label="Buscar no funil"></div>
+      <div class="kanban-scroll"><div class="kanban" id="kanban"></div></div>
+      <p class="hint">Arraste os cartões entre etapas. Nesta demonstração, as alterações permanecem apenas enquanto a página estiver aberta.</p>
+    </section>
+    <section class="page" id="conta"><div class="surface settings-panel"><div class="settings-title">Minha conta</div><p>Área demonstrativa de perfil do usuário.</p><div class="settings-line"><strong>Nome</strong><span>Usuário demonstração</span></div><div class="settings-line"><strong>Perfil</strong><span>Administrador</span></div><div class="settings-line"><strong>Senha</strong><span>Gerenciada apenas no sistema original</span></div></div></section>
+    <section class="page" id="whatsapp"><div class="surface settings-panel"><div class="settings-title">Configuração de WhatsApp</div><p>O aplicativo real permite selecionar o perfil do Microsoft Edge para abrir o WhatsApp Web da conta comercial. Esta demonstração não acessa contas nem abre conversas.</p><label class="field-label" for="wa-number">Número de atendimento (fictício)</label><input class="setting-input" id="wa-number" value="(00) 90000-0000" readonly><label class="field-label" for="wa-profile">Perfil do Microsoft Edge</label><select class="setting-input" id="wa-profile"><option>Perfil de demonstração</option></select><button class="btn btn-primary" id="wa-test">Testar perfil</button></div></section>
+    <section class="page" id="config"><div class="surface settings-panel"><div class="settings-title">Configurações</div><p>O CRM original possui gestão de usuários, origens e etapas comerciais. Aqui você pode conhecer essas áreas sem acessar configurações reais.</p><div class="settings-line"><strong>Usuários</strong><span>Gerenciamento de contas e permissões</span></div><div class="settings-line"><strong>Origens</strong><span>Site, indicação, evento</span></div><div class="settings-line"><strong>Etapas</strong><span>Etapas configuráveis no funil comercial</span></div></div></section>
+    <footer class="page-foot">Protótipo de portfólio — sem conexão com servidores, banco de dados ou WhatsApp.</footer>
+  </main>
+</div>
+<div class="modal-overlay" id="modal-overlay" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-head"><h2 id="modal-title">Lead</h2><button class="icon-btn" id="close-modal" aria-label="Fechar">×</button></div><div id="modal-content"></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
